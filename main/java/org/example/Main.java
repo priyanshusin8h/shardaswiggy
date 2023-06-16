@@ -69,11 +69,11 @@ public class Main {
                     for (int i = 0; i < 10; i++) {
                         if (restaurants[i] != null) {
                             float k = (i + 1) / 10;
-                            System.out.println(String.format("%s %5s %5s",restaurants[i].id, restaurants[i].name + "\uD83C\uDF7D\uFE0F",  restaurants[i].ratings ));
+                            System.out.println(String.format("%s %5s %5s",restaurants[i].id, restaurants[i].name  + "\uD83C\uDF7D\uFE0F",  restaurants[i].ratings));
                             for (int j = 0; j < 10; j++) {
                                 if (dishes[j] != null && restaurants[i].id.equals(dishes[j].id)) {
                                     k += 0.1;
-                                    System.out.println(String.format("\t%.1f %5s %5s", Integer.parseInt(dishes[j].id) + k, dishes[j].dish_name, dishes[j].price + "\uD83D\uDCB5"));
+                                    System.out.println(String.format("\t%.1f %5s %5s", Integer.parseInt(dishes[j].id) + k, dishes[j].dish_name, dishes[j].price +"\uD83C\uDF7D\uFE0F"));
                                 }
                             }
                             System.out.println("-----------------------------------");
@@ -84,7 +84,7 @@ public class Main {
                     System.out.println("Choose restaurant to search from : ");
                     for(int i = 0; i<10; i++){
                         if(restaurants[i] != null)
-                            System.out.println(String.format("%s %5s %5s",restaurants[i].id, restaurants[i].name + "\uD83C\uDF7D\uFE0F",  restaurants[i].ratings + "✨" ));
+                            System.out.println(String.format("%s %5s %5s",restaurants[i].id, restaurants[i].name + "\uD83C\uDF7D\uFE0F", restaurants[i] ));
                     }
                     int index = sc.nextInt();
 
